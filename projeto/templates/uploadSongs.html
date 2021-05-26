@@ -15,19 +15,19 @@
     <form id="uploadSongs-form6" class="list">
       <label>Name</label>
       <label class="item item-input" id="uploadSongs-input4">
-        <input type="text" placeholder="Text here">
+        <input id="musica_nome" type="text" placeholder="Text here">
       </label>
       <div class="spacer" style="width: 300px; height: 17px;"></div>
       <label>Description</label>
       <label class="item item-input" id="uploadSongs-textarea1">
         <span class="input-label"></span>
-        <textarea placeholder="Description"></textarea></label>
+        <textarea id="musica_descricao" placeholder="Description"></textarea></label>
       <div class="spacer" style="width: 300px; height: 17px;display:flex"></div>
       <label>Genre</label>
       <label class="item item-select" id="uploadSongs-select1">
         <span class="input-label" >Genre</span>
-        <select onchange="var val = this.options[this.selectedIndex].value; 
-        this.form.tipo.style.display=(val=='Outro')?'block':'none';  
+        <select id="genero" onchange="var val = this.options[this.selectedIndex].value; 
+        this.form.tipo.style.display=(val=='Outro')?'block':'none';
         document.getElementById('espaco').style.display=(val=='Outro')?'block':'none';
         document.getElementById('espacoo').style.display=(val=='Outro')?'block':'none'">
           <option value="Rock">Rock</option>
@@ -45,7 +45,7 @@
       <input type="file" id="myfile" name="myfile">
     </div>
     <div class="spacer" style="width: 300px; height: 17px;"></div>
-    <a ui-sref="tabsController.profile()" id="uploadSongs-button11" style="color:#FFFFFF;" class="button button-stable button-block">Publish</a>
+    <a ui-sref="tabsController.profile()" id="uploadSongs-button11" style="color:#FFFFFF;" onclick="test()" class="button button-stable button-block">Publish</a>
     <a ui-sref="tabsController.profile()" id="uploadSongs-button12" class="button button-block" style="background-color: #ED982A;">Cancel</a>
   </ion-content>
 </ion-view>
