@@ -7,5 +7,9 @@ function test(){
         alert("Incorrect name");
         return false;
     }
+}
 
+function enviar(){
+    var texto = document.getElementById("texto");
+    texto.value='';
 }

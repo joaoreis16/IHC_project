@@ -4,9 +4,10 @@
 }
 .letras {
     font-size: 14px;
-    font-family: Roboto;
     font-weight: bolder;
     display: inline;
+    font-family: Roboto;
+
 }
 
 .editButton {   
