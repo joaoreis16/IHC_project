@@ -1,0 +1,57 @@
+.musicTab {
+    position:fixed;
+    bottom:49px;
+    z-index: 10;
+    background-color:#5685A0;
+    width:100%;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    left:0px;
+}
+.musicTab h4 {
+    margin-bottom:0;
+    margin-top:0;
+    line-height:20px;
+}
+
+.musicTab h5 {
+    margin-bottom:0;
+    margin-top:0;
+    line-height:20px;
+}
+
+.musicTab .musicImage {
+height:43px;
+width:43px;
+border-radius:50%;
+background-color:#FFFFFF;
+margin-right:16px;
+
+}
+
+.musicTab .leftArrow {
+margin-left: auto;
+}
+
+.musicTab .musicProgress {
+position:absolute; 
+top:-1px;
+left:0px;
+width:60%;
+height:1px;
+background-color:#ffffff;
+}
+
+.buttonBack {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+}
