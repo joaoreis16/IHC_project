@@ -1,7 +1,7 @@
 <ion-view title="Upload Songs" id="page18">
   <ion-content padding="true" class="has-header">
     <div style="display: flex; align-items: center;">
-      <button type="button" class="buttonBack"><img src="img/arrowBack.svg" style="margin-right: 20px;"/></button>
+      <button type="button" class="buttonBack" onclick="history.go(-1)"><img src="img/arrowBack.svg" style="margin-right: 20px;"/></button>
       <label style="font-weight: bold; flex-grow: 1; text-align: center;">Upload Songs</label>
     </div>
     <div>
@@ -26,15 +26,19 @@
       <label>Genre</label>
       <label class="item item-select" id="uploadSongs-select1">
         <span class="input-label" >Genre</span>
-        <select onchange="var val = this.options[this.selectedIndex].value; this.form.tipo.style.display=(val=='Outro')?'block':'none'">
+        <select onchange="var val = this.options[this.selectedIndex].value; 
+        this.form.tipo.style.display=(val=='Outro')?'block':'none';  
+        document.getElementById('espaco').style.display=(val=='Outro')?'block':'none';
+        document.getElementById('espacoo').style.display=(val=='Outro')?'block':'none'">
           <option value="Rock">Rock</option>
           <option value="Metal">Metal</option>
           <option value="Hip-Hop">Hip-Hop</option>
           <option value="Outro">Outro</option>
         </select>
       </label>
-      <input type="text" name="tipo" id="text"  style="display: none; position: fixed;" placeholder="Genre:"/>
-      <div class="spacer" style="width: 300px; height: 17px;"></div>
+      <div class="spacer" id="espacoo" style="width: 300px; height: 17px; display: none;"></div>
+      <input type="text" name="tipo" id="text" style="display: none; width: 95%; position: fixed; border: 0.5px solid black;" placeholder="Genre:"/>
+      <div class="spacer" id="espaco" style="width: 300px; height: 30px; display: none;"></div>
     </form>
     <div>
       <label for="myfile"><b>Song file:</b></label>
