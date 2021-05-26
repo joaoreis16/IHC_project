@@ -11,9 +11,9 @@
 
 .editButton {   
     background-color: #5685A0;
-    border-radius: 18%;
+    border-radius: 22%;
     color: white;
-    padding: 15px 25px;
+    padding: 5px 25px;
     text-align: center;
     font-size: 16px;
 }
