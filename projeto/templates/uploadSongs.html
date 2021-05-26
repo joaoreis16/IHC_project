@@ -1,0 +1,38 @@
+<ion-view title="Upload Songs" id="page18">
+  <ion-content padding="true" class="has-header">
+    <div style="display: flex; align-items: center;">
+      <img src="img/arrowBack.svg" style="margin-right: 20px;"/>
+      <label style="font-weight: bold; flex-grow: 1; text-align: center;">Upload Songs</label>
+    </div>
+    <div>
+      <img src="img/OjhzV2ZRD2PuuvmXY1VH_IMG_0854.jpg" style="display: block; width: 40%; height: 40%; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer" style="width: 300px; height: 27px;"></div>
+    <form id="uploadSongs-form6" class="list">
+      <label class="item item-input" id="uploadSongs-input4">
+        <input type="text" placeholder="Music name">
+      </label>
+      <div class="spacer" style="width: 300px; height: 17px;"></div>
+      <label class="item item-input" id="uploadSongs-textarea1">
+        <span class="input-label"></span><textarea placeholder="Description"></textarea></label>
+      <div class="spacer" style="width: 300px; height: 17px;"></div>
+      <label class="item item-select" id="uploadSongs-select1">
+        <span class="input-label">Genre</span>
+        <select>
+          <option>Rock</option>
+          <option>Metal</option>
+          <option>Hip-Hop</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <div class="spacer" style="width: 300px; height: 17px;"></div>
+    </form>
+    <div>
+      <label for="myfile">Upload Song:</label>
+      <input type="file" id="myfile" name="myfile">
+    </div>
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <a ui-sref="tabsController.profile()" id="uploadSongs-button11" style="color:#FFFFFF;" class="button button-stable button-block">Publish</a>
+    <a ui-sref="tabsController.profile()" id="uploadSongs-button12" class="button button-block" style="background-color: #ED982A;">Cancel</a>
+  </ion-content>
+</ion-view>
