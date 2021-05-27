@@ -1,5 +1,4 @@
 function keydownEvent(event) {
-    console.log(event)
     if (event.key === "Enter") {
         let text = event.target.value
         event.target.value = ""
@@ -9,4 +8,9 @@ function keydownEvent(event) {
         message.innerText = text
         messageFeed.appendChild(message)
     }
+}
+
+function eggMusic(event) {
+    let button = document.querySelector("#eggButton")
+    button.src = "img/filledEgg.svg"
 }
