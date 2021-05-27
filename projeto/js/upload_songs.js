@@ -13,3 +13,4 @@ function enviar(){
     var texto = document.getElementById("texto");
     texto.value='';
 }
+
