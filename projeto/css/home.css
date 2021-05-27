@@ -72,8 +72,8 @@ background-color:#ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 380px;
-    margin: 100px auto;
+    width: 100%;
+    margin: 75px auto;
 }
 
 .progress-bar {
