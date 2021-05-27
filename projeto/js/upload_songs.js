@@ -1,8 +1,8 @@
 
 function test(){
-    var nome = document.getElementById("musica_nome").value;
-    var descricao = document.getElementById("musica_descricao").value;
-    var genero = document.getElementById("genero").value;
+    let nome = document.getElementById("musica_nome").value;
+    let descricao = document.getElementById("musica_descricao").value;
+    let genero = document.getElementById("genero").value;
     if (nome==''){
         alert("Incorrect name");
         return false;
@@ -10,6 +10,6 @@ function test(){
 }
 
 function enviar(){
-    var texto = document.getElementById("texto");
+    let texto = document.getElementById("texto");
     texto.value='';
 }
