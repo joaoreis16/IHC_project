@@ -11,6 +11,13 @@ function keydownEvent(event) {
 }
 
 function eggMusic(event) {
-    let button = document.querySelector("#eggButton")
-    button.src = "img/filledEgg.svg"
+    let button = event.target
+    if (!button.classList.contains('filled')) {
+        button.src = 'img/filledEgg.svg'
+        button.classList.add('filled')
+    }
+    else {
+        button.src = 'img/egg.svg'
+        button.classList.remove('filled')
+    }
 }
