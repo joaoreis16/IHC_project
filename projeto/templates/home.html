@@ -5,17 +5,17 @@
       <img src="img/NoteBird.png" style="height:50px; padding-left:10px; border-radius:70%">
     </div>
     <div style="height: 150px">
-      <h4 style="color:#000000; font-weight: bold">Your Playlists</h4>
+      <h4 style="color:#000000; font-weight: bold; font-size: 25px;">Your Playlists</h4>
       <div style="display:flex"> 
         <img src="img/astro.jpg" style="height:125px; ">
         <img src="img/PmyYI02ITJe8ukfHm5WY_Evolve.jpg" style="height:125px; padding-left:10px">
       </div>
     </div>
-    <h4 id="home-heading3" style="color:#000000;font-weight: bold">NoteBird Weekly</h4>
+    <h4 id="home-heading3" style="color:#000000;font-weight: bold; font-size: 25px;">NoteBird Weekly</h4>
     
-    <div ng-repeat="item in feed | reverse">
-      <p>{{item.name}}</p>
-      <img src="{{item.img}}" style="height:125px; width: 125px; margin:0 auto 16px auto; display:flex" ng-if="item.img">
+    <div ng-repeat="item in feed | reverse" style="background-color: lightgray; border-radius: 10%;">
+      <p style="text-align: center; font-size: 16px;">{{item.name}}</p>
+      <img src="{{item.img}}" style="height:125px; width: 125px; margin:0 auto 15px auto; display:flex;" ng-if="item.img">
     </div>
   </ion-content>
   <div class="musicTab" ui-sref="musica">
