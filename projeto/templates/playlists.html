@@ -1,29 +1,38 @@
 <ion-view title="Playlists" id="page16">
   <ion-content padding="true" class="has-header">
     <div style="display:flex;">
-    <button type="button" class="buttonBack" onclick="history.go(-1)"><img src="img/arrowBack.svg" style="margin-right: 20px;"/></button>
-    <h4 style="text-align: center;"><b>My playlists</b></h4>
+    <a href="/index.html#/page1/page13"><button type="button" class="buttonBack"><img src="img/arrowBack.svg" style="margin-right: 20px;"/></button></a>
+    <h2 style="text-align: center;"><b>My playlists</b></h2>
     </div>
-    <div style="display: flex; border:solid 1px black;">
-      <img src="img/playlist.png" alt="somw text" height="60px" width="100px">
-      <p style="margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;">Chill music</p>
+    <div style="display: flex; border:solid 1px black;" ui-sref="singlePlaylist()">
+      <img src="img/sunset.jpg" alt="somw text" height="60px" width="100px">
+      <p style="color: black; text-decoration: none; margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;">Chill music</p>
     </div>
     <div style="display: flex; border:solid 1px black; margin-top: 10px;">
-      <img src="img/playlist1.png" alt="somw text" height="60px" width="100px">
-      <p style="margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;">Hip-Hop</p>
+      <img src="img/hiphop.jpg" alt="somw text" height="60px" width="100px">
+      <a href="/index.html#/page20" style="color: black; text-decoration: none; margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;"><p>Hip-Hop</p></a>
     </div>
+
     <form id="playlists-form3" class="list">
       <div style="text-align: center;">
-        <button type="button" id="buton" style="height: 35px;width: 200px;margin-top: 200px ;background-color: #5685A0; border-radius: 50px ;color: white; text-align: center;"><b>+</b> New Playlist</button>
+        <button type="button" id="buton" onclick="document.getElementById('portisse').style.visibility = 'visible'" style="height: 35px;width: 200px;margin-top: 150px ;background-color: #5685A0; border-radius: 50px ;color: white; text-align: center;"><b>+</b> New Playlist</button>
       </div>
     </form>
-    </ion-content>
-  <div class="musicTab" ui-sref="musica">
+
+    <div id = "portisse" style = "visibility: hidden; background-color: lightgrey; width: 75%;left:40px;height: 200px; top: 250px;position:absolute; border-radius: 15%; text-align: center">
+      <h4 style="font-weight: bold; font-size: 25px;" >Create Playlist</h4>
+      <label name="Nome" style="flex-grow:1;" class="item item-input">
+        <input id="nomemusica" type="text" placeholder="Nome playlist">
+      </label>
+      <button style="margin-top: 0.5cm; width: 100px; height: 30px;" onclick="document.getElementById('portisse').style.visibility='hidden'">Ok</button>
+    </div>
+
+  <div class="musicTab" ui-sref="musica" onclick="document.getElementById('portisse').style.visibility='hidden'">
     <div class="musicProgress"></div>
     <div class="musicImage"></div>
     <div>
-      <h4 style="font-weight: bold">Caveira</h4>
-      <h5>ProfJam</h5>
+      <h4 style="font-weight: bold">Bohemian Rhapsody</h4>
+      <h5>Queen</h5>
     </div>
     <div style="margin-left:auto">
       <img src="img/leftArrow.svg" style="height:35px">
@@ -36,4 +45,5 @@
     </div>
   </div>
 </div>
+</ion-content>
 </ion-view>
