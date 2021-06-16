@@ -49,13 +49,20 @@ function getSongs() {
 }
 
 
+function getUploadSongData() {
+    //console.log(emitmethod)
+    let songName = "Martin dropped '" + document.querySelector("#uploadSongs-input4 input").value + "'"
+    let json = JSON.parse(localStorage.getItem("publishedSongs"))
+    json.push({name: songName})
+    localStorage.setItem("publishedSongs", JSON.stringify(json))
+}
+
 function search(event) {
     let input = event.target.value
     let songs = getSongs()
     let foundSongs = songs.filter(song=>{
         return song.name.toUpperCase().search(input.toUpperCase())!==-1
     })
-    console.log(foundSongs)
     let history = document.querySelector("#historyTopSearch")
     if (history) history.parentElement.removeChild(history)
     let searchedSongs = document.querySelector("#searchedSongs")

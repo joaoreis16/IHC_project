@@ -14,6 +14,12 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 })
 
 .run(function($ionicPlatform) {
+  if (!localStorage.getItem("publishedSongs")) {
+    localStorage.setItem("publishedSongs", JSON.stringify([
+      {name:"Joni Kings dropped 'Summer Bliss'", artist:"Joni Kings", img:"img/jonikings.png"},
+      {name:"Artur renoted 'The Dark Side of the Moon'", artist:"Pink Floyd", img:"img/dsotm.png"}
+    ]))
+  }
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
