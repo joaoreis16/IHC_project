@@ -7,3 +7,12 @@
 .scroll {
     height: 100%;
 }
+
+.divPlaylist {
+    text-align: Center;
+    border:solid 1px black; 
+    margin-top: 10px;
+    height: 62px; 
+    font-style: oblique; 
+    font-weight: bolder; 
+}

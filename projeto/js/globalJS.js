@@ -10,6 +10,16 @@ function keydownEvent(event) {
     }
 }
 
+function keydownEvent2() {
+    let text = document.querySelector("#nomemusica").value
+    let messageFeed = document.querySelector("#list_playlists")
+    let message = document.createElement("div")
+    
+    message.classList.add("divPlaylist")
+    message.innerText = text
+    messageFeed.appendChild(message)
+}
+
 function eggMusic(event) {
     let button = event.target
     if (!button.classList.contains('filled')) {
@@ -59,7 +69,7 @@ function getUploadSongData() {
     //console.log(emitmethod)
     let songName = "Martin dropped '" + document.querySelector("#uploadSongs-input4 input").value + "'"
     let json = JSON.parse(sessionStorage.getItem("publishedSongs"))
-    console.log(json)
+    //console.log(json)
     json.push({name: songName, img: "img/newsong.png"})
     sessionStorage.setItem("publishedSongs", JSON.stringify(json))
 }
