@@ -19,13 +19,12 @@
       </div>
     </form>
 
-    <div id = "portisse" style = "visibility: hidden; background-color: lightgrey; width: 75%;left:40px;height: 150px; top: 250px;position:absolute; border-radius: 15%; text-align: center">
-      <h4 style="font-weight: bold" >Create Playlist</h4>
-      <label ui-sref="searchAutocomplete" class="item item-input" id="search-search1" name="Pesquisar" style="flex-grow:1;">
-          <i class="icon ion-search placeholder-icon"></i>
-          <input type="search" placeholder="Search">
-        </label>
-        <button>Ok</button>
+    <div id = "portisse" style = "visibility: hidden; background-color: lightgrey; width: 75%;left:40px;height: 200px; top: 250px;position:absolute; border-radius: 15%; text-align: center">
+      <h4 style="font-weight: bold; font-size: 25px;" >Create Playlist</h4>
+      <label name="Nome" style="flex-grow:1;" class="item item-input">
+        <input id="nomemusica" type="text" placeholder="Nome playlist">
+      </label>
+      <button style="margin-top: 0.5cm; width: 100px; height: 30px;" onclick="document.getElementById('portisse').style.visibility='hidden'">Ok</button>
     </div>
 
   <div class="musicTab" ui-sref="musica" onclick="document.getElementById('portisse').style.visibility='hidden'">
