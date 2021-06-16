@@ -48,14 +48,16 @@ function enviar(){
     texto.value='';
 }
 
+let songs = [
+    {name:"Bohemian Rhapsody", artist:"Queen", liked:true},
+    {name:"The Dark Side of the Moon", artist:"Pink Floyd", liked:false},
+    {name:"Yellow Submarine", artist:"The Beatles", liked:false},
+    {name:"Imagine", artist:"John Lennon", liked:true},
+    {name:"Eye of the Tiger", artist:"Survivor", liked:true}
+]
+
 function getSongs() {
-    return [
-        {name:"Bohemian Rhapsody", artist:"Queen", liked:true},
-        {name:"The Dark Side of the Moon", artist:"Pink Floyd", liked:false},
-        {name:"Yellow Submarine", artist:"The Beatles", liked:false},
-        {name:"Imagine", artist:"John Lennon", liked:true},
-        {name:"Eye of the Tiger", artist:"Survivor", liked:true}
-    ]
+    return songs
 }
 
 function getPlaylists() {
@@ -71,6 +73,8 @@ function getUploadSongData() {
     let json = JSON.parse(sessionStorage.getItem("publishedSongs"))
     //console.log(json)
     json.push({name: songName, img: "img/newsong.png"})
+    let songs = getSongs()
+    songs.push({name: document.querySelector("#uploadSongs-input4 input").value, artist: "Martin Garrix", liked: false})
     sessionStorage.setItem("publishedSongs", JSON.stringify(json))
 }
 
