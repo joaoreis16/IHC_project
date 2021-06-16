@@ -99,6 +99,12 @@ angular.module('app.routes', [])
     controller: 'musicaCtrl'
   })
 
+  .state('singlePlaylist', {
+    url: '/page20',
+    templateUrl: 'templates/singlePlaylist.html',
+    controller: 'singlePlaylistCtrl'
+  })
+
 $urlRouterProvider.otherwise('/page1/page10')
 
 
