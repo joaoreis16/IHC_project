@@ -111,3 +111,60 @@ function searchPlaylists(event) {
         searchedPlaylists.appendChild(element)
     })
 }
+
+function hideSongs() {
+    let h3SongsDiv = document.querySelector("#h3Songs")
+    let songsDiv = document.querySelector("#searchedSongs")
+    let h3PlaylistsDiv = document.querySelector("#h3Playlists")
+    let playlistsDiv = document.querySelector("#searchedPlaylists")
+    if (h3SongsDiv.style.display !== "none") {
+        h3SongsDiv.style.display = "none"
+    }
+    if (songsDiv.style.display !== "none") {
+        songsDiv.style.display = "none"
+    }
+    if (h3PlaylistsDiv.style.display == "none") {
+        h3PlaylistsDiv.style.display = "inline"
+    }
+    if (playlistsDiv.style.display == "none") {
+        playlistsDiv.style.display = "inline"
+    }
+}   
+
+function hidePlaylists() {
+    let h3PlaylistsDiv = document.querySelector("#h3Playlists")
+    let playlistsDiv = document.querySelector("#searchedPlaylists")
+    let h3SongsDiv = document.querySelector("#h3Songs")
+    let songsDiv = document.querySelector("#searchedSongs")
+    if (h3PlaylistsDiv.style.display !== "none") {
+        h3PlaylistsDiv.style.display = "none"
+    }
+    if (playlistsDiv.style.display !== "none") {
+        playlistsDiv.style.display = "none"
+    }
+    if (h3SongsDiv.style.display == "none") {
+        h3SongsDiv.style.display = "inline"
+    }
+    if (songsDiv.style.display == "none") {
+        songsDiv.style.display = "inline"
+    }
+}
+
+function showAll() {
+    let h3SongsDiv = document.querySelector("#h3Songs")
+    let songsDiv = document.querySelector("#searchedSongs")
+    let h3PlaylistsDiv = document.querySelector("#h3Playlists")
+    let playlistsDiv = document.querySelector("#searchedPlaylists")
+    if (h3PlaylistsDiv.style.display == "none") {
+        h3PlaylistsDiv.style.display = "inline"
+    }
+    if (playlistsDiv.style.display == "none") {
+        playlistsDiv.style.display = "inline"
+    }
+    if (h3SongsDiv.style.display == "none") {
+        h3SongsDiv.style.display = "inline"
+    }
+    if (songsDiv.style.display == "none") {
+        songsDiv.style.display = "inline"
+    }
+}

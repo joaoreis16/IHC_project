@@ -11,10 +11,10 @@
       </div>
       <div style="height:10px"></div>
       <div id="search-button-bar1" class="button-bar">
-        <button id="search-button4" class="button button-stable button-block" style="font-weight: bold">All</button>
+        <button id="search-button4" class="button button-stable button-block" style="font-weight: bold" onclick="showAll()">All</button>
         <button id="search-button5" class="button button-stable button-block" style="font-weight: bold">Artist</button>
-        <button id="search-button6" class="button button-stable button-block" style="font-weight: bold">Album</button>
-        <button id="search-button7" class="button button-stable button-block" style="font-weight: bold">Songs</button>
+        <button id="search-button6" class="button button-stable button-block" style="font-weight: bold" onclick="hideSongs()">Playlists</button>
+        <button id="search-button7" class="button button-stable button-block" style="font-weight: bold" onclick="hidePlaylists()">Songs</button>
       </div>
     </form>
     </div>
@@ -33,12 +33,12 @@
         <button type="button" style="border-radius:10px; background-color: #5685A0;border-color: #5685A0">John Lennon</button>
       </div>
     </div>
-    <h3><b>Songs</b></h3>
+    <h3 id="h3Songs"><b>Songs</b></h3>
     <div id="searchedSongs">
       
     </div>
-    <h3><b>Playlists</b></h3>
-    <div id="searchedPlaylists">
+    <h3 id="h3Playlists" style="margin-top: 20px"><b>Playlists</b></h3>
+    <div id="searchedPlaylists" style="margin-top: 15px">
 
     </div>  
    </ion-content>
