@@ -52,9 +52,10 @@ function getSongs() {
 function getUploadSongData() {
     //console.log(emitmethod)
     let songName = "Martin dropped '" + document.querySelector("#uploadSongs-input4 input").value + "'"
-    let json = JSON.parse(localStorage.getItem("publishedSongs"))
+    let json = JSON.parse(sessionStorage.getItem("publishedSongs"))
+    console.log(json)
     json.push({name: songName})
-    localStorage.setItem("publishedSongs", JSON.stringify(json))
+    sessionStorage.setItem("publishedSongs", JSON.stringify(json))
 }
 
 function search(event) {
