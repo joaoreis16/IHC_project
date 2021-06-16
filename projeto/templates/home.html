@@ -13,7 +13,7 @@
     </div>
     <h4 id="home-heading3" style="color:#000000;font-weight: bold">NoteBird Weekly</h4>
     
-    <div ng-repeat="item in feed | reverse"> <!--- | orderBy: ''-->
+    <div ng-repeat="item in feed | reverse">
       <p>{{item.name}}</p>
       <img src="{{item.img}}" style="height:125px; width: 125px; margin:0 auto 16px auto; display:flex" ng-if="item.img">
     </div>

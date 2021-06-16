@@ -48,17 +48,23 @@ function getSongs() {
     ]
 }
 
+function getPlaylists() {
+    return [
+        {name:"Chill Music"},
+        {name:"Hip-Hop"}
+    ]
+}
 
 function getUploadSongData() {
     //console.log(emitmethod)
     let songName = "Martin dropped '" + document.querySelector("#uploadSongs-input4 input").value + "'"
     let json = JSON.parse(sessionStorage.getItem("publishedSongs"))
     console.log(json)
-    json.push({name: songName})
+    json.push({name: songName, img: "img/newsong.png"})
     sessionStorage.setItem("publishedSongs", JSON.stringify(json))
 }
 
-function search(event) {
+function searchSongs(event) {
     let input = event.target.value
     let songs = getSongs()
     let foundSongs = songs.filter(song=>{
@@ -72,8 +78,26 @@ function search(event) {
     })
     foundSongs.forEach(song=>{
         let element = document.createElement("div")
-        element.innerHTML = song.name
+        element.innerHTML = song.artist + " - " + song.name
         searchedSongs.appendChild(element)
     })
-    
+}
+
+function searchPlaylists(event) {
+    let input = event.target.value
+    let playlists = getPlaylists()
+    let foundPlaylists = playlists.filter(playlist=>{
+        return playlist.name.toUpperCase().search(input.toUpperCase())!==-1
+    })
+    let history = document.querySelector("#historyTopSearch")
+    if (history) history.parentElement.removeChild(history)
+    let searchedPlaylists = document.querySelector("#searchedPlaylists")
+    Array.from(searchedPlaylists.children).forEach(c=>{
+        searchedPlaylists.removeChild(c)
+    })
+    foundPlaylists.forEach(playlist=>{
+        let element = document.createElement("div")
+        element.innerHTML = playlist.name
+        searchedPlaylists.appendChild(element)
+    })
 }
