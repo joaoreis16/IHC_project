@@ -1,17 +1,19 @@
-<ion-view title="Playlists" id="page16">
+<ion-view title="Playlists" id="page16" style="background-color: #f5f5f5">
   <ion-content padding="true" class="has-header">
     <div style="display:flex;">
-    <button type="button" class="buttonBack" ui-sref="tabsController.profile()"><img src="img/arrowBack.svg" style="margin-right: 20px;"/></button>
+    <button ui-sref="tabsController.profile()" type="button" class="buttonBack" style="background-color: #f5f5f5"><img src="img/arrowBack.svg" style="margin-right: 20px;background-color: #f5f5f5"/></button>
     <h2 style="text-align: center;"><b>My playlists</b></h2>
     </div>
-    <div style="display: flex; border:solid 1px black;" ui-sref="singlePlaylist()">
-      <img src="img/sunset.jpg" alt="somw text" height="60px" width="100px">
-      <p style="color: black; text-decoration: none; margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;">Chill music</p>
-    </div>
-    <div style="display: flex; border:solid 1px black; margin-top: 10px;">
-      <img src="img/hiphop.jpg" alt="somw text" height="60px" width="100px">
-      <a href="/index.html#/page20" style="color: black; text-decoration: none; margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;"><p>Hip-Hop</p></a>
-    </div>
+    <div id="list_playlists">
+      <div style="display: flex; border:solid 1px black;" ui-sref="singlePlaylist()">
+        <img src="img/sunset.jpg" alt="somw text" height="60px" width="100px">
+        <p style="color: black; text-decoration: none; margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;">Chill music</p>
+      </div>
+      <div style="display: flex; border:solid 1px black; margin-top: 10px;">
+        <img src="img/hiphop.jpg" alt="somw text" height="60px" width="100px">
+        <p style="color: black; text-decoration: none; margin-left: 30%; font-style: oblique; font-weight: bolder; margin-top: 5%;">Hip-Hop</p>
+      </div>
+  </div>
 
     <form id="playlists-form3" class="list">
       <div style="text-align: center;">
@@ -24,7 +26,7 @@
       <label name="Nome" style="flex-grow:1;" class="item item-input">
         <input id="nomemusica" type="text" placeholder="Nome playlist">
       </label>
-      <button style="margin-top: 0.5cm; width: 100px; height: 30px;" onclick="document.getElementById('portisse').style.visibility='hidden'">Ok</button>
+      <button style="margin-top: 0.5cm; width: 100px; height: 30px;" onclick="document.getElementById('portisse').style.visibility='hidden'; keydownEvent2(event)">Ok</button>
     </div>
 
   <div class="musicTab" ui-sref="musica" onclick="document.getElementById('portisse').style.visibility='hidden'">
